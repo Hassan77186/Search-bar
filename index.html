@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <div class="search-box">
+        <input type="search" name="" id="" class="search-bar" placeholder="Search">
+        <button class="search-button" id="search-button" onmouseenter=" hover_button()" onmouseleave="NOThover_button()">F</button>
+    </div>
+    </header>
+</body>
+
+</html>
+
+<style>
+    *{
+        margin: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    header{
+        background-color: aliceblue;
+    }
+
+    .search-box{
+        position: relative;
+        text-align: center;
+
+        margin-inline: auto;
+
+        width: 250px;
+        height: 50px;
+    }
+
+    .search-bar{
+        position: absolute;
+        left: 35px;
+        top: 11px;
+    
+        height: 27px;
+        width: 170px;
+
+        padding-left: 10px;
+
+        border: 1px solid aliceblue;
+        border-radius: 50px;
+    }
+
+    .search-bar:focus{
+        outline: none;
+    }
+
+    .search-button{
+        position: absolute;
+        top: 12px;
+        right: 40px;
+        
+        height: 25px;
+        width: 20px;
+
+        
+        background-color: darkred;
+        color: white;
+        border: 1px solid darkred;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        overflow-x: hidden;
+    }
+
+    .search-button:hover{
+        cursor: pointer;
+        width: 50px;
+        transition: 0.5s width;
+    }
+
+    .search-button:not(:hover){
+        width: 20px;
+        transition: 0.5s width;
+    }
+
+</style>
+
+<script>
+    function hover_button(){
+            document.getElementById("search-button").innerHTML = "Find";
+    }
+    function NOThover_button(){
+            document.getElementById("search-button").innerHTML = "F";
+    }
+
+</script>
